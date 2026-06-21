@@ -1,43 +1,85 @@
 using System;
 
-
-
 public class TasKagitMakas
 {
-    public string[] secenekler = ["tas", "kagit", "makas"];
+    private string rastegelVeri;
+    public string[] secenekler = ["tas", "makas", "kagit"];
 
     private static Random rnd = new Random();
-    public string RastgeleSecim()
+    private void RastgeleSecim()
     {
-        return secenekler[rnd.Next(0, 3)];
+        rastegelVeri = secenekler[rnd.Next(0, 3)];
     }
 
+    public void secimYap(string secilenVeri)
+    {
+        RastgeleSecim();
+        if (rastegelVeri == secilenVeri)
+        {
+            Console.WriteLine("Berabere kaldiniz");
+        }
+        else if (rastegelVeri == secenekler[0] && secilenVeri == secenekler[1])
+        {
+            Console.WriteLine("Ne yazik ki kaybettiniz...");
+        }
+        else if (rastegelVeri == secenekler[1] && secilenVeri == secenekler[0])
+        {
+            Console.WriteLine("Kazandiniz!");
+        }
+        else if (rastegelVeri == secenekler[0] && secilenVeri == secenekler[2])
+        {
+            Console.WriteLine("Kazandiniz!");
+        }
+        else if (rastegelVeri == secenekler[2] && secilenVeri == secenekler[0])
+        {
+            Console.WriteLine("Ne yazik ki kaybettiniz...");
+        }
+        else if (rastegelVeri == secenekler[1] && secilenVeri == secenekler[2])
+        {
+            Console.WriteLine("Ne yazik ki kaybettiniz...");
+        }
+        else if (rastegelVeri == secenekler[2] && secilenVeri == secenekler[1])
+        {
+            Console.WriteLine("Kazandiniz!");
+        }
+    }
 
-     public void exitProgram()
+    public void exitProgram()
     {
         string button = Console.ReadLine();
         if (button == "k")
         {
             Console.WriteLine("Taş kağıt makas programı sonlandırıldı.");
-           
+            Environment.Exit();
         }
     }
 
 
     public void kurallariYaz()
     {
-        {
-            System.Console.WriteLine("     TAŞ-KAĞIT-MAKAS OYUN KURALLARI");
-            System.Console.WriteLine("1. Taş, makasi yener.");
-            System.Console.WriteLine("2. Makas, kağidi yener.");
-            System.Console.WriteLine("3. Kağıt, taşı yener.");
-            System.Console.WriteLine("4. Aynı seçimlerde oyun berabere biter.");
+        Console.WriteLine("     TAŞ-KAĞIT-MAKAS OYUN KURALLARI");
+        Console.WriteLine("1. Taş, makasi yener.");
+        Console.WriteLine("2. Makas, kağidi yener.");
+        Console.WriteLine("3. Kağıt, taşı yener.");
+        Console.WriteLine("4. Aynı seçimlerde oyun berabere biter.");
 
-            System.Console.WriteLine(" TAŞ-KAĞIT-MAKAS OYUNUNA HOŞ GELDİNİZ! ");
-            System.Console.WriteLine("Kurallar: Taş makası kırar, Makas kağıdı keser, Kağıt taşı sarar.");
-            System.Console.WriteLine("Oyundan çıkmak için 'çıkış' yazabilirsiniz.");
-            System.Console.WriteLine("3 puana ulaşan oyunu kazanır!");
-        }
+        Console.WriteLine(" TAŞ-KAĞIT-MAKAS OYUNUNA HOŞ GELDİNİZ! ");
+        Console.WriteLine("Kurallar: Taş makası kırar, Makas kağıdı keser, Kağıt taşı sarar.");
+        Console.WriteLine("Oyundan çıkmak için 'çıkış' yazabilirsiniz.");
+        Console.WriteLine("3 puana ulaşan oyunu kazanır!");
     }
+}
 
+class Program()
+{
+    static void Main(string[] args)
+    {
+        TasKagitMakas tkm = new TasKagitMakas();
+        tkm.kurallariYaz();
+
+        Console.Write("Lutfen tas(0) makas(1) kagit(2) seciniz: ");
+        string secim = tkm.secenekler[int.Parse(Console.ReadLine())];
+
+        tkm.secimYap(secim);
+    }
 }
