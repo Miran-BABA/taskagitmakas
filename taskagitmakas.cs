@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 public Class taskagıtmakas{
     
 }
@@ -15,3 +16,18 @@ print(" TAŞ-KAĞIT-MAKAS OYUNUNA HOŞ GELDİNİZ! ")
     print("Oyundan çıkmak için 'çıkış' yazabilirsiniz.")
     print("3 puana ulaşan oyunu kazanır!")
 }
+=======
+// rastgele degisken
+// 1 tanesi atansin
+
+public class TasKagitMakas
+{
+    public string[] secenekler = ["tas", "kagit", "makas"];
+
+    private static Random rnd = new Random();
+    public string RastgeleSecim()
+    {
+        return secenekler[rnd.Next(0, 3)];
+    }
+}
+
