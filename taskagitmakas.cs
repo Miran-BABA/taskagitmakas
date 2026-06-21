@@ -1,7 +1,5 @@
 using System;
 
-
-
 public class TasKagitMakas
 {
     public string[] secenekler = ["tas", "kagit", "makas"];
