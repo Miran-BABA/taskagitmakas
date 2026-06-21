@@ -1,24 +1,11 @@
 
-<<<<<<< HEAD
-public Class taskagıtmakas{
-    
-}
-
+public Class taskagitmakas
 {
-print("     TAŞ-KAĞIT-MAKAS OYUN KURALLARI")
-print("1. Taş, makası yener.")
-print("2. Makas, kağıdı yener.")
-print("3. Kağıt, taşı yener.")
-print("4. Aynı seçimlerde oyun berabere biter.")
 
-print(" TAŞ-KAĞIT-MAKAS OYUNUNA HOŞ GELDİNİZ! ")
-    print("Kurallar: Taş makası kırar, Makas kağıdı keser, Kağıt taşı sarar.")
-    print("Oyundan çıkmak için 'çıkış' yazabilirsiniz.")
-    print("3 puana ulaşan oyunu kazanır!")
 }
-=======
-// rastgele degisken
-// 1 tanesi atansin
+
+
+
 
 public class TasKagitMakas
 {
@@ -29,5 +16,22 @@ public class TasKagitMakas
     {
         return secenekler[rnd.Next(0, 3)];
     }
+    public void kurallariYaz()
+    {
+        {
+            System.Console.WriteLine("     TAŞ-KAĞIT-MAKAS OYUN KURALLARI");
+            System.Console.WriteLine("1. Taş, makasi yener.");
+            System.Console.WriteLine("2. Makas, kağidi yener.");
+            System.Console.WriteLine("3. Kağıt, taşı yener.");
+            System.Console.WriteLine("4. Aynı seçimlerde oyun berabere biter.");
+
+            System.Console.WriteLine(" TAŞ-KAĞIT-MAKAS OYUNUNA HOŞ GELDİNİZ! ");
+            System.Console.WriteLine("Kurallar: Taş makası kırar, Makas kağıdı keser, Kağıt taşı sarar.");
+            System.Console.WriteLine("Oyundan çıkmak için 'çıkış' yazabilirsiniz.");
+            System.Console.WriteLine("3 puana ulaşan oyunu kazanır!");
+        }
+    }
 }
+
+
 
