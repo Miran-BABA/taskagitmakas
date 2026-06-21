@@ -14,6 +14,8 @@ public class TasKagitMakas
     public void secimYap(string secilenVeri)
     {
         RastgeleSecim();
+        Console.WriteLine($"Sizin seciminiz: {secilenVeri}, bilgisayarin secimi: {rastegelVeri}");
+
         if (rastegelVeri == secilenVeri)
         {
             Console.WriteLine("Berabere kaldiniz");
@@ -41,16 +43,6 @@ public class TasKagitMakas
         else if (rastegelVeri == secenekler[2] && secilenVeri == secenekler[1])
         {
             Console.WriteLine("Kazandiniz!");
-        }
-    }
-
-    public void exitProgram()
-    {
-        string button = Console.ReadLine();
-        if (button == "k")
-        {
-            Console.WriteLine("Taş kağıt makas programı sonlandırıldı.");
-            Environment.Exit();
         }
     }
 
